@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="REST API Testing">
+    <test name="Positive Tests">
+        <classes>
+            <class name="test_classes.positive_cases.HappyPathTestCase">
+                <methods>
+                    <include name="postBookTest"/>
+                    <include name="putBookTest"/>
+                    <include name="deleteBookTest"/>
+                </methods>
+            </class>
+            <class name="test_classes.positive_cases.PostAndPutWithValidFieldsTestCase"/>
+            <class name="test_classes.positive_cases.TestingIdempotencyTestCase">
+                <methods>
+                    <include name="idempotencyGetAllTest"/>
+                    <include name="idempotencyGetTest"/>
+                    <include name="idempotencyPutTest"/>
+                    <include name="idempotencyDeleteTest"/>
+                </methods>
+            </class>
+            <class name="test_classes.positive_cases.AddBookWithoutOptionalFieldsTestCase"/>
+            <class name="test_classes.positive_cases.DeleteAllAndAddTestCase"/>
+        </classes>
+    </test>
+    <test name="Negative Tests">
+        <classes>
+            <class name="test_classes.negative_cases.WrongBookIdTestCase"/>
+            <class name="test_classes.negative_cases.PutWithInvalidFieldsTestCase"/>
+            <class name="test_classes.negative_cases.PostWithInvalidFieldsTestCase"/>
+            <class name="test_classes.negative_cases.WrongHeaderTestCase"/>
+            <class name="test_classes.negative_cases.WrongMethodTestCase"/>
+        </classes>
+    </test>
+</suite>

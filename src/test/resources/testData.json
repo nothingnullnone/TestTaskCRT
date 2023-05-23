@@ -1,0 +1,38 @@
+{
+  "randomIntegerMin": 1,
+  "randomIntegerMax": 1000,
+  "randomStringMinLen": 50,
+  "randomStringMaxLen": 500,
+  "randomStringFirstPossibleChar": "!",
+  "randomStringLastPossibleChar": "z",
+  "repeatsForIdempotencyTest": 5,
+  "bookToPost": {
+    "author": "Scott Chacon, Ben Straub",
+    "isElectronicBook": true,
+    "name": "Pro Git",
+    "year": 2022
+  },
+  "bookToPut": {
+    "author": "Scott Chacon",
+    "isElectronicBook": false,
+    "name": "Pro Git",
+    "year": 2010
+  },
+  "bookToPostWithoutOptionalFields": {
+    "name": "Java Руководство для начинающих"
+  },
+  "initBooksList": [
+    {
+      "author": "Роберт Мартин",
+      "isElectronicBook": false,
+      "name": "Чистый код",
+      "year": 1998
+    },
+    {
+      "author": "Томас Кормен, Чарльз Лейзерсон",
+      "isElectronicBook": true,
+      "name": "Алгоритмы: построение и анализ",
+      "year": 1989
+    }
+  ]
+}
